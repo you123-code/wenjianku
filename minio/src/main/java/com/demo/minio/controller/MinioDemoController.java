@@ -60,10 +60,10 @@ public class MinioDemoController {
 
     //文件删除
     @DeleteMapping
-    public String delete(String name) {
+    public String delete(String filename) {
         try {
             MinioClient minioClient = new MinioClient(ENDPOINT, ACCESSKEY, SECRETKEY);
-            minioClient.removeObject(BUCKETNAME, name);
+            minioClient.removeObject(BUCKETNAME, filename);
         } catch (Exception e) {
             return "删除失败"+e.getMessage();
         }
@@ -73,7 +73,6 @@ public class MinioDemoController {
 
     @GetMapping
     public void downloadFiles(@RequestParam("filename") String filename, HttpServletResponse httpResponse) {
-
         try {
             MinioClient minioClient = new MinioClient(ENDPOINT, ACCESSKEY, SECRETKEY);
             InputStream object = minioClient.getObject(BUCKETNAME, filename);
@@ -92,6 +91,5 @@ public class MinioDemoController {
             LOGGER.info("导出失败：", ex.getMessage());
         }
     }
-
 }
 
