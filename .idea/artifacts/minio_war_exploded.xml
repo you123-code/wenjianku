@@ -1,0 +1,61 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="minio:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/minio_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="minio" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter:2.6.3" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot:2.6.3" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:5.3.15" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.6.3" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-logging:2.6.3" />
+          <element id="library" level="project" name="Maven: ch.qos.logback:logback-classic:1.2.10" />
+          <element id="library" level="project" name="Maven: ch.qos.logback:logback-core:1.2.10" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.33" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-to-slf4j:2.17.1" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.17.1" />
+          <element id="library" level="project" name="Maven: org.slf4j:jul-to-slf4j:1.7.33" />
+          <element id="library" level="project" name="Maven: jakarta.annotation:jakarta.annotation-api:1.3.5" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:5.3.15" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.3.15" />
+          <element id="library" level="project" name="Maven: org.yaml:snakeyaml:1.29" />
+          <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.18.22" />
+          <element id="library" level="project" name="Maven: io.minio:minio:3.0.10" />
+          <element id="library" level="project" name="Maven: com.google.http-client:google-http-client-xml:1.20.0" />
+          <element id="library" level="project" name="Maven: com.google.http-client:google-http-client:1.20.0" />
+          <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpclient:4.5.13" />
+          <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpcore:4.4.15" />
+          <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.15" />
+          <element id="library" level="project" name="Maven: xpp3:xpp3:1.1.4c" />
+          <element id="library" level="project" name="Maven: com.google.guava:guava:18.0" />
+          <element id="library" level="project" name="Maven: com.squareup.okhttp3:okhttp:3.14.9" />
+          <element id="library" level="project" name="Maven: com.squareup.okio:okio:1.12.0" />
+          <element id="library" level="project" name="Maven: joda-time:joda-time:2.7" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.13.1" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.13.1" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.13.1" />
+          <element id="library" level="project" name="Maven: com.google.code.findbugs:annotations:3.0.1" />
+          <element id="library" level="project" name="Maven: net.jcip:jcip-annotations:1.0" />
+          <element id="library" level="project" name="Maven: com.google.code.findbugs:jsr305:3.0.1" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-web:2.6.3" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-json:2.6.3" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.1" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.1" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.module:jackson-module-parameter-names:2.13.1" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-tomcat:2.6.3" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-el:9.0.56" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-websocket:9.0.56" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:5.3.15" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.3.15" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.3.15" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.3.15" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.3.15" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="minio/web/Web" />
+    </root>
+  </artifact>
+</component>

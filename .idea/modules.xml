@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/gateway/gateway.iml" filepath="$PROJECT_DIR$/gateway/gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/minio/minio.iml" filepath="$PROJECT_DIR$/minio/minio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nacos/nacos.iml" filepath="$PROJECT_DIR$/nacos/nacos.iml" />
       <module fileurl="file://$PROJECT_DIR$/wenjianku.iml" filepath="$PROJECT_DIR$/wenjianku.iml" />
     </modules>
   </component>

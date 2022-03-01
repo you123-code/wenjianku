@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: IntelliJ IDEA
+Built-By: Dell
+Build-Jdk: 1.8.0_144
+Implementation-Title: minio
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.demo
+Main-Class: ${start-class}
+

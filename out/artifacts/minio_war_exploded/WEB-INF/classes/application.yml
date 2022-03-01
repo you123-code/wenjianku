@@ -1,0 +1,20 @@
+server:
+    port: 8080
+
+spring:
+    servlet:
+        multipart:
+            enabled: true #\u5F00\u542F\u6587\u4EF6\u4E0A\u4F20
+            max-file-size: 500MB
+            max-request-size: 500MB
+
+minio:
+    endpoint: https://play.min.io #Minio\u670D\u52A1\u6240\u5728\u5730\u5740
+    bucketName: you #\u5B58\u50A8\u6876\u540D\u79F0
+    accessKey: Q3AM3UQ867SPQQA43P2F #\u8BBF\u95EE\u7684key
+    secretKey: zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG #\u8BBF\u95EE\u7684\u79D8\u94A5
+#  endpoint: http://192.168.211.132:9090 #Minio\u670D\u52A1\u6240\u5728\u5730\u5740
+#  bucketName: tcc #\u5B58\u50A8\u6876\u540D\u79F0
+#  accessKey: minio #\u8BBF\u95EE\u7684key
+#  secretKey: minio@123 #\u8BBF\u95EE\u7684\u79D8\u94A5
+
