@@ -15,6 +15,10 @@ public class HelloController {
     @NacosValue(value = "${helloworld:HelloWorld}", autoRefreshed = true)
     private String hello;
 
+    /**
+     * 浏览器访问http://192.168.211.1:8080/hello
+     * @return
+     */
     @GetMapping("/hello")
     public String hello() {
         return hello;
