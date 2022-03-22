@@ -47,16 +47,16 @@ public class GeneratorCodeConfig {
 
             // 数据源配置
             DataSourceConfig dsc = new DataSourceConfig();
-            dsc.setUrl("jdbc:mysql://127.0.0.1:3306/demo?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true");
+            dsc.setUrl("jdbc:mysql://192.168.211.132:3306/rongdan?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true");
             dsc.setDriverName("com.mysql.cj.jdbc.Driver");
             dsc.setUsername("root");
-            dsc.setPassword("lyja");
+            dsc.setPassword("123456");
             mpg.setDataSource(dsc);
 
             // 包配置
             PackageConfig pc = new PackageConfig();
 //        pc.setModuleName(scanner("模块名"));
-            pc.setParent("com.demo");
+            pc.setParent("com.demo.testdatasource");
             pc.setEntity("model");
             pc.setMapper("mapper");
             pc.setService("service");

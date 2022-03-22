@@ -1,0 +1,11 @@
+server:
+  port: 8081
+spring:
+    application:
+      name: testdata
+    cloud:
+      nacos:
+        discovery:
+          server-addr: 192.168.211.132:8848
+          password: nacos
+          username: nacos

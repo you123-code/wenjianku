@@ -7,10 +7,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="testdatasource" />
+        <module name="nacos" />
         <module name="wenjianku" />
         <module name="gateway" />
-        <module name="nacos" />
+        <module name="testdatasource" />
         <module name="minio" />
       </profile>
     </annotationProcessing>
