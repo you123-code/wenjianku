@@ -7,7 +7,14 @@ spring:
             enabled: true #\u5F00\u542F\u6587\u4EF6\u4E0A\u4F20
             max-file-size: 500MB
             max-request-size: 500MB
-
+    application:
+      name: minio-server
+    cloud:
+      nacos:
+        discovery:
+          server-addr: 192.168.211.132:8848
+          password: nacos
+          username: nacos
 minio:
     endpoint: https://play.min.io #Minio\u670D\u52A1\u6240\u5728\u5730\u5740
     bucketName: you #\u5B58\u50A8\u6876\u540D\u79F0
