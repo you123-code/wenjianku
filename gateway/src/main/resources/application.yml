@@ -27,4 +27,12 @@ spring:
           filters:
             - StripPrefix=1
           uri: https://space.bilibili.com/215563138
+          #uri: http://192.168.211.1:8081/rd-request/getUser?id=911592303011950590
+        - id: test-server1
+          predicates:
+            #- Path=/request-api/request/**
+            - Path=/test/**
+          filters:
+            - StripPrefix=2
+          uri: lb://test-server
 

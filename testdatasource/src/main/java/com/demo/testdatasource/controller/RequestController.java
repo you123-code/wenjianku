@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2022-03-11
  */
 @RestController
-@RequestMapping("/rd-request")
+@RequestMapping("/request")
 public class RequestController {
 
     @Autowired
