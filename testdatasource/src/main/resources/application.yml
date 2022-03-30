@@ -1,6 +1,7 @@
 server:
   port: 8081
   servlet:
+    #请求路径：http://192.168.211.1:8081/test/request/getUser?id=911592303011950590
     context-path: /test
 spring:
   application:
