@@ -1,10 +1,10 @@
 package com.demo.gateway;
 
 import cn.hutool.core.util.RandomUtil;
-import com.demo.gateway.model.dto.ClientConfig;
-import com.demo.gateway.service.securityAPI.BankClientHelperService;
-import com.demo.gateway.service.securityAPI.SecurityApiRpcService;
-import com.demo.gateway.service.utils.CryptUtil;
+import com.demo.gateway.server.model.dto.ClientConfig;
+import com.demo.gateway.server.service.securityAPI.BankClientHelperService;
+import com.demo.gateway.server.service.securityAPI.SecurityApiRpcService;
+import com.demo.gateway.server.service.utils.CryptUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

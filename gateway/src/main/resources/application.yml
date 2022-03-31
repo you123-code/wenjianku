@@ -31,8 +31,14 @@ spring:
           predicates:
             #- Path=/request-api/request/**
             #gateway跳转路径：http://192.168.211.1:8900/test-server/test/request/getUser?id=911592303011950590
-            - Path=/test/**
+            - Path=/test1/**
           filters:
-            - StripPrefix=2
+            - StripPrefix=1
+            - Log=true
+            - Time=true
+            - DecryptRequestBodyFilter=true
           uri: lb://test-server
+          order: 1
+          #uri: http://192.168.211.1:8081
+
 
