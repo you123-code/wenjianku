@@ -1,6 +1,6 @@
-package com.demo.testdatasource.service.utils;
+package com.demo.gateway.service.utils;
 
-import com.demo.testdatasource.model.dto.ClientConfig;
+import com.demo.gateway.model.dto.ClientConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.codec.binary.Base64;
 
@@ -293,8 +293,8 @@ public class CryptUtil {
      * @return
      */
     public static ClientConfig getClientConfig(String clientId) {
-        List<com.demo.testdatasource.model.dto.ClientConfig> list = new ArrayList<com.demo.testdatasource.model.dto.ClientConfig>() {{
-            add(com.demo.testdatasource.model.dto.ClientConfig.builder()
+        List<com.demo.gateway.model.dto.ClientConfig> list = new ArrayList<com.demo.gateway.model.dto.ClientConfig>() {{
+            add(com.demo.gateway.model.dto.ClientConfig.builder()
                     .clientId("FsFoshanBOG")
                     .clientName("(贷款业务)")
                     .clientSecret("FsFoshanBOG")
@@ -310,7 +310,7 @@ public class CryptUtil {
                     .httpKeepAlive("false")
                     .apiRoot("http://19.129.103.12:8081").build());
         }};
-        com.demo.testdatasource.model.dto.ClientConfig collect = list.stream().filter(c -> c.getClientId().equals(clientId)).collect(Collectors.toList()).get(0);
+        com.demo.gateway.model.dto.ClientConfig collect = list.stream().filter(c -> c.getClientId().equals(clientId)).collect(Collectors.toList()).get(0);
 
         return collect;
     }

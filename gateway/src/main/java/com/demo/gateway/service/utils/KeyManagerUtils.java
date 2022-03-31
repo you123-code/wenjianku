@@ -1,4 +1,4 @@
-package com.demo.testdatasource.service.utils;
+package com.demo.gateway.service.utils;
 
 import javax.net.ssl.KeyManager;
 import javax.net.ssl.KeyManagerFactory;

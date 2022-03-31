@@ -1,4 +1,4 @@
-package com.demo.testdatasource.service.utils;
+package com.demo.gateway.service.utils;
 
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.util.ResourceUtils;

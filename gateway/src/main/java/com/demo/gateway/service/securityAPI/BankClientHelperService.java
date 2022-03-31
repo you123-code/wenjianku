@@ -1,4 +1,4 @@
-package com.demo.testdatasource.service.securityAPI;
+package com.demo.gateway.service.securityAPI;
 
 /**
  * @author youwei
@@ -6,8 +6,8 @@ package com.demo.testdatasource.service.securityAPI;
  * @date 2022/3/30 17:04
  */
 
-import com.demo.testdatasource.config.certs.KeyPairManageService;
-import com.demo.testdatasource.model.dto.ClientConfig;
+import com.demo.gateway.config.certs.KeyPairManageService;
+import com.demo.gateway.model.dto.ClientConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -51,7 +51,7 @@ public class BankClientHelperService {
      * @param config
      * @return
      */
-    public PrivateKey getPrivateKey( com.demo.testdatasource.model.dto.ClientConfig config ){
+    public PrivateKey getPrivateKey( com.demo.gateway.model.dto.ClientConfig config ){
 
         return keyPairManageService.getPrivateKeyByPath(
                 config.getPriCer(), config.getKeyStorePwd(),

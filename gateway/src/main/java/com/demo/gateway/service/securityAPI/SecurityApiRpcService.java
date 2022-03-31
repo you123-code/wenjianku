@@ -1,7 +1,7 @@
-package com.demo.testdatasource.service.securityAPI;
+package com.demo.gateway.service.securityAPI;
 
-import com.demo.testdatasource.model.dto.ClientConfig;
-import com.demo.testdatasource.service.utils.CryptUtil;
+import com.demo.gateway.model.dto.ClientConfig;
+import com.demo.gateway.service.utils.CryptUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -50,7 +50,7 @@ public class SecurityApiRpcService {
      * @param signature
      * @param clientConfig
      */
-    public void verifySignature(String body, String signature, com.demo.testdatasource.model.dto.ClientConfig clientConfig) {
+    public void verifySignature(String body, String signature, com.demo.gateway.model.dto.ClientConfig clientConfig) {
         PublicKey publicKey = bankClientHelperService.getPublicKey(clientConfig);
         log.info("response signature =>{}", signature);
         byte[] dataForSign = (body + "&key=" + clientConfig.getClientSecret()).getBytes(StandardCharsets.UTF_8);
@@ -70,7 +70,7 @@ public class SecurityApiRpcService {
      * @return
      * @throws Exception
      */
-    public String sign(String body, com.demo.testdatasource.model.dto.ClientConfig client, PrivateKey privateKey) throws Exception {
+    public String sign(String body, com.demo.gateway.model.dto.ClientConfig client, PrivateKey privateKey) throws Exception {
 
         String signature = CryptUtil.RSA.sign(
                 (body + "&key=" + client.getClientSecret()).getBytes(StandardCharsets.UTF_8), privateKey,

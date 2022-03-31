@@ -1,9 +1,9 @@
-package com.demo.testdatasource.config.certs;
+package com.demo.gateway.config.certs;
 
 import cn.hutool.core.map.MapUtil;
 import cn.hutool.crypto.digest.MD5;
-import com.demo.testdatasource.service.utils.KeyManagerUtils;
-import com.demo.testdatasource.service.utils.ResUtils;
+import com.demo.gateway.service.utils.KeyManagerUtils;
+import com.demo.gateway.service.utils.ResUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;

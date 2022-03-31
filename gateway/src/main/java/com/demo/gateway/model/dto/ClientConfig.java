@@ -1,4 +1,4 @@
-package com.demo.testdatasource.model.dto;
+package com.demo.gateway.model.dto;
 
 import lombok.Builder;
 import lombok.Data;
