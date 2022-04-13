@@ -37,9 +37,10 @@ public class GeneratorCodeConfig {
 
             // 全局配置
             GlobalConfig gc = new GlobalConfig();
-            String projectPath = System.getProperty("user.dir");
+            //String projectPath = System.getProperty("user.dir");
+            String projectPath = "E:\\zqhl\\wenjianku\\testdatasource";
             gc.setOutputDir(projectPath + "/src/main/java");
-            gc.setAuthor("astupidcoder");
+            gc.setAuthor("youwei");
             gc.setOpen(false);
             //实体属性 Swagger2 注解
             gc.setSwagger2(false);

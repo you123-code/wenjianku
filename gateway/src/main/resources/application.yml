@@ -36,7 +36,7 @@ spring:
             - StripPrefix=1
             - Log=true
             - Time=true
-            - DecryptRequestBodyFilter=true
+            #- DecryptRequestBodyFilter=true
           uri: lb://test-server
           order: 1
           #uri: http://192.168.211.1:8081

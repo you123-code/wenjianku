@@ -83,6 +83,26 @@
             <version>RELEASE</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>repository_changgou345.com.alibaba.citrus</groupId>
+            <artifactId>citrus-webx-all</artifactId>
+            <version>3.0.8</version>
+        </dependency>
+        <dependency>
+            <groupId>repository_changgou345.org.jboss.resteasy</groupId>
+            <artifactId>jaxrs-api</artifactId>
+            <version>3.0.7.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>repository_changgou345.org.apache.hadoop</groupId>
+            <artifactId>hadoop-yarn-common</artifactId>
+            <version>2.7.2</version>
+        </dependency>
+        <dependency>
+            <groupId>repository_changgou345.org.jboss.resteasy</groupId>
+            <artifactId>resteasy-jaxrs</artifactId>
+            <version>3.0.7.Final</version>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
