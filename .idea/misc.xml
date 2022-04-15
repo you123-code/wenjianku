@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/gateway/pom.xml" />
         <option value="$PROJECT_DIR$/nacos/pom.xml" />
         <option value="$PROJECT_DIR$/testdatasource/pom.xml" />
+        <option value="$PROJECT_DIR$/designpatterns/pom.xml" />
       </list>
     </option>
   </component>
