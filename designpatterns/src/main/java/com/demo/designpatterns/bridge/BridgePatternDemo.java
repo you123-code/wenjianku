@@ -4,6 +4,7 @@ package com.demo.designpatterns.bridge;
  * @author youwei
  * @version 1.0
  * @date 2022/4/24 18:00
+ * 桥接模式
  */
 public class BridgePatternDemo {
     public static void main(String[] args) {

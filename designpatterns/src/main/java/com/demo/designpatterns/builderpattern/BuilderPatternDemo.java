@@ -6,6 +6,7 @@ import com.demo.designpatterns.builderpattern.cla.MealBuilder;
  * @author youwei
  * @version 1.0
  * @date 2022/4/22 14:44
+ * 建造者模式
  */
 public class BuilderPatternDemo {
     public static void main(String[] args) {

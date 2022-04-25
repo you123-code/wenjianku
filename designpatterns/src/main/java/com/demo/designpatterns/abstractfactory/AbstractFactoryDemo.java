@@ -7,6 +7,7 @@ import com.demo.designpatterns.abstractfactory.shape.Shape;
  * @author youwei
  * @version 1.0
  * @date 2022/4/14 14:23
+ * 抽象工厂模式
  */
 public class AbstractFactoryDemo {
     public static void main(String[] args) {

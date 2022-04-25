@@ -4,6 +4,7 @@ package com.demo.designpatterns.singleton;
  * @author youwei
  * @version 1.0
  * @date 2022/4/14 15:03
+ * 单例模式
  */
 public class SingleDemo {
     public static void main(String[] args) {

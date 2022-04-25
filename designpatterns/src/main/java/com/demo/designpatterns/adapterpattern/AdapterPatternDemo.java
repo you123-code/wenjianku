@@ -6,6 +6,7 @@ import com.demo.designpatterns.adapterpattern.cla.AudioPlayer;
  * @author youwei
  * @version 1.0
  * @date 2022/4/24 16:39
+ * 适配器模式
  */
 public class AdapterPatternDemo {
     public static void main(String[] args) {

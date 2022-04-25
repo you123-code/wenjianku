@@ -4,6 +4,7 @@ package com.demo.designpatterns.factory;
  * @author youwei
  * @version 1.0
  * @date 2022/4/14 11:39
+ * 工厂模式
  */
 public class FactoryDemo {
     public static void main(String[] args) {
