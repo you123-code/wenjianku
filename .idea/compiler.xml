@@ -14,6 +14,7 @@
         <module name="nacos" />
         <module name="wenjianku" />
         <module name="testdatasource" />
+        <module name="suanfa" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,6 +23,7 @@
       <module name="gateway" target="1.8" />
       <module name="minio" target="1.8" />
       <module name="nacos" target="1.8" />
+      <module name="suanfa" target="1.8" />
       <module name="testdatasource" target="1.8" />
       <module name="wenjianku" target="1.8" />
     </bytecodeTargetLevel>
@@ -33,6 +35,7 @@
       <module name="gateway" options="-parameters" />
       <module name="minio" options="-parameters" />
       <module name="nacos" options="-parameters" />
+      <module name="suanfa" options="-parameters" />
       <module name="testdatasource" options="-parameters" />
       <module name="wenjianku" options="-parameters" />
     </option>
