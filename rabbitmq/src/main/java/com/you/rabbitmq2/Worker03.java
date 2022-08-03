@@ -33,6 +33,8 @@ public class Worker03 {
         CancelCallback cancelCallback = var1 ->{
             System.out.println("消费被中断触发回调！！");
         };
+        //设置1为不公平分发,设置大于1（指定分发数量）
+        channel.basicQos(2);
         channel.basicConsume(TASK_QUEUE_NAME,false,deliverCallback,cancelCallback);
     }
 }
