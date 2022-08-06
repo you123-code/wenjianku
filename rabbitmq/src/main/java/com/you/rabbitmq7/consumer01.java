@@ -39,7 +39,7 @@ public class consumer01 {
         //设置死信RoutingKey
         arguments.put("x-dead-letter-routing-key","lisi");
         //设置队列最大长度
-        arguments.put("x-max-length",6);
+        //arguments.put("x-max-length",6);
         channel.queueDeclare(NORMAL_QUEUE,false,false,false,arguments);
         //--------------------------------------------------------------------------------
         channel.queueDeclare(DEAD_QUEUE,false,false,false,null);
@@ -49,8 +49,16 @@ public class consumer01 {
         channel.queueBind(DEAD_QUEUE,DEAD_EXCHANGE,"lisi");
         System.out.println("等待接收消息。。。。");
         DeliverCallback deliverCallback = (val1,val2)->{
-            System.out.println("consumer01获取的消息为---》"+new String(val2.getBody(),"UTF-8"));
+            String str = new String(val2.getBody(),"UTF-8");
+            if("info1".equals(str)){
+                System.out.println("consumer01拒绝的消息为---》"+str);
+                channel.basicReject(val2.getEnvelope().getDeliveryTag(),false);
+            }else{
+                System.out.println("consumer01获取的消息为---》"+str);
+                channel.basicAck(val2.getEnvelope().getDeliveryTag(),false);
+            }
         };
-        channel.basicConsume(NORMAL_QUEUE,true,deliverCallback,val1->{});
+        //拒绝开发手动应答false
+        channel.basicConsume(NORMAL_QUEUE,false,deliverCallback,val1->{});
     }
  }
