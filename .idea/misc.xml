@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/designpatterns/pom.xml" />
         <option value="$PROJECT_DIR$/suanfa/pom.xml" />
         <option value="$PROJECT_DIR$/rabbitmq/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-rabbitmq/pom.xml" />
       </list>
     </option>
   </component>

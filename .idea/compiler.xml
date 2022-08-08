@@ -15,6 +15,7 @@
         <module name="wenjianku" />
         <module name="rabbitmq" />
         <module name="testdatasource" />
+        <module name="springboot-rabbitmq" />
         <module name="suanfa" />
       </profile>
     </annotationProcessing>
@@ -25,6 +26,7 @@
       <module name="minio" target="1.8" />
       <module name="nacos" target="1.8" />
       <module name="rabbitmq" target="8" />
+      <module name="springboot-rabbitmq" target="1.8" />
       <module name="suanfa" target="1.8" />
       <module name="testdatasource" target="1.8" />
       <module name="wenjianku" target="1.8" />
@@ -37,6 +39,7 @@
       <module name="gateway" options="-parameters" />
       <module name="minio" options="-parameters" />
       <module name="nacos" options="-parameters" />
+      <module name="springboot-rabbitmq" options="-parameters" />
       <module name="suanfa" options="-parameters" />
       <module name="testdatasource" options="-parameters" />
       <module name="wenjianku" options="-parameters" />
