@@ -32,9 +32,25 @@ public class SendMsgController {
     @ApiImplicitParams(
         @ApiImplicitParam(name = "message",value = "消息内容")
     )
-    public void sendMsg(String message){
+    public void sendMsg1(String message){
         log.info("当前时间发送：{}，发送一条消息给两个TTL队列:{}",new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()),message);
         rabbitTemplate.convertAndSend(TtlQueueConfig.X_EXCHANGE,TtlQueueConfig.ROUTING_A,"消息来自ttl为10s的队列"+message);
         rabbitTemplate.convertAndSend(TtlQueueConfig.X_EXCHANGE,TtlQueueConfig.ROUTING_B,"消息来自ttl为40s的队列"+message);
+    }
+
+    //开始发消息
+    @GetMapping("/sendTtlMsg")
+    @ApiOperation("发送消息——》延时时间")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "message",value = "消息内容"),
+            @ApiImplicitParam(name = "ttlTime",value = "延迟时间")
+         }
+    )
+    public void sendMsg(String message,String ttlTime){
+        log.info("当前时间发送：{}，发送一条延迟{}的消息给TTL队列:{}",new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()),ttlTime,message);
+        rabbitTemplate.convertAndSend(TtlQueueConfig.X_EXCHANGE,TtlQueueConfig.ROUTING_C,message,msg ->{
+            msg.getMessageProperties().setExpiration(ttlTime);
+            return msg;
+        });
     }
 }
