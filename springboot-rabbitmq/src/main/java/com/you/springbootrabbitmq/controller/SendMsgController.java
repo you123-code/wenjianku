@@ -1,5 +1,6 @@
 package com.you.springbootrabbitmq.controller;
 
+import com.you.springbootrabbitmq.config.DelayedQueueConfig;
 import com.you.springbootrabbitmq.config.TtlQueueConfig;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -50,6 +51,22 @@ public class SendMsgController {
         log.info("当前时间发送：{}，发送一条延迟{}的消息给TTL队列:{}",new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()),ttlTime,message);
         rabbitTemplate.convertAndSend(TtlQueueConfig.X_EXCHANGE,TtlQueueConfig.ROUTING_C,message,msg ->{
             msg.getMessageProperties().setExpiration(ttlTime);
+            return msg;
+        });
+    }
+
+
+    @GetMapping("/sendDelayMsg")
+    @ApiOperation("发送消息——》基于插件延时")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "message",value = "消息内容"),
+            @ApiImplicitParam(name = "delayTime",value = "延迟时间")
+    }
+    )
+    public void sendDelayMsg(String message,Integer delayTime){
+        log.info("当前时间发送：{}，发送一条延迟{}的消息给延迟队列:{}",new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()),delayTime,message);
+        rabbitTemplate.convertAndSend(DelayedQueueConfig.DELAYED_EXCHANGE,DelayedQueueConfig.DELAYED_ROUTING_KEY,message, msg ->{
+            msg.getMessageProperties().setDelay(delayTime);
             return msg;
         });
     }
