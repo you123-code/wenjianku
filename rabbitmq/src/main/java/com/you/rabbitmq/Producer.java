@@ -1,10 +1,13 @@
 package com.you.rabbitmq;
 
+import com.rabbitmq.client.AMQP;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeoutException;
 
 /**
@@ -34,7 +37,19 @@ public class Producer {
              * 4.是否自动删除，最后一个消费者断开连接之后，该队列是否自动删除，true自动删除，false不自动删除
              * 5.其他参数
              */
-            channel.queueDeclare(QUEUE_NAME,false,false,false,null);
+            Map<String,Object> arguments = new HashMap<>();
+            //官方允许配置0-255之间，设置过大CPU和内存造成浪费
+            arguments.put("x-max-priority",10);
+            channel.queueDeclare(QUEUE_NAME,true,false,false,arguments);
+            for (int i = 1; i < 11; i++) {
+                String msg = "info"+i;
+                if(i == 5){
+                    AMQP.BasicProperties properties = new AMQP.BasicProperties().builder().priority(5).build();
+                    channel.basicPublish("",QUEUE_NAME,properties,msg.getBytes());
+                }else{
+                    channel.basicPublish("",QUEUE_NAME,null,msg.getBytes());
+                }
+            }
             //发消息
             String message = "hello world!";
             /**
@@ -44,7 +59,7 @@ public class Producer {
              * 3.其它参数信息
              * 4.发送消息的消息体
              */
-            channel.basicPublish("",QUEUE_NAME,null,message.getBytes());
+            //channel.basicPublish("",QUEUE_NAME,null,message.getBytes());
             System.out.println("消息发送完毕！！");
         } catch (IOException e) {
             e.printStackTrace();
