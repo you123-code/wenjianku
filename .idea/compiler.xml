@@ -3,32 +3,29 @@
   <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.24/13a394eed5c4f9efb2a6d956e2086f1d81e857d9/lombok-1.18.24.jar" />
+        </processorPath>
+        <module name="demo.main" />
+      </profile>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="gateway" />
-        <module name="minio" />
         <module name="designpatterns" />
-        <module name="common" />
+        <module name="minio" />
+        <module name="springboot-rabbitmq" />
         <module name="nacos" />
-        <module name="wenjianku" />
+        <module name="gateway" />
         <module name="rabbitmq" />
         <module name="testdatasource" />
-        <module name="springboot-rabbitmq" />
         <module name="suanfa" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="common" target="1.8" />
-      <module name="designpatterns" target="1.8" />
-      <module name="gateway" target="1.8" />
-      <module name="minio" target="1.8" />
-      <module name="nacos" target="1.8" />
-      <module name="rabbitmq" target="8" />
-      <module name="springboot-rabbitmq" target="1.8" />
-      <module name="suanfa" target="1.8" />
-      <module name="testdatasource" target="1.8" />
       <module name="wenjianku" target="1.8" />
     </bytecodeTargetLevel>
   </component>

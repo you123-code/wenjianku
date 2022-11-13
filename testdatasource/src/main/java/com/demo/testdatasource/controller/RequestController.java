@@ -1,6 +1,7 @@
 package com.demo.testdatasource.controller;
 
 
+import com.demo.testdatasource.enums.Color;
 import com.demo.testdatasource.model.Request;
 import com.demo.testdatasource.service.RequestService;
 import com.demo.testdatasource.utils.Consts;
@@ -61,5 +62,9 @@ public class RequestController {
             }
         });
         return ResponseResult.ok();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Color.GREEN.toString());
     }
 }
