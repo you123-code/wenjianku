@@ -1,7 +1,8 @@
 package com.demo.testdatasource.controller;
 
 
-import com.demo.testdatasource.enums.Color;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.demo.testdatasource.model.Request;
 import com.demo.testdatasource.service.RequestService;
 import com.demo.testdatasource.utils.Consts;
@@ -64,7 +65,9 @@ public class RequestController {
         return ResponseResult.ok();
     }
 
-    public static void main(String[] args) {
-        System.out.println(Color.GREEN.toString());
+    @GetMapping("/testAop")
+    public JSONObject testAop(String id){
+        System.out.println("收到aop测试请求，进入aop测试");
+        return JSON.parseObject("{\"message\":\"SUCCESS\",\"code\":200}");
     }
 }

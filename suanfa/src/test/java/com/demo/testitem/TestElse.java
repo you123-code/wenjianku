@@ -1,5 +1,6 @@
 package com.demo.testitem;
 
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -7,18 +8,13 @@ import org.junit.jupiter.api.Test;
  * @version 1.0
  * @date 2022/11/8 0:21
  */
+@Slf4j
 public class TestElse {
     @Test
     public void test1(){
-        int[] list1 = new int[10];
-        list1[0] = 1;
-        list1[1] = 2;
-        String[] list2 = new String[10];
-        System.out.println(list1[0]);
-        //System.out.println(list2[0].length());
-        for(int i : list1){
-            System.out.println(i
-            );
-        }
+        int i = 1;
+        byte b = 2;
+        int j = b +i;
+        System.out.println(j);
     }
 }
