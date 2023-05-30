@@ -12,6 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -65,9 +66,16 @@ public class RequestController {
         return ResponseResult.ok();
     }
 
-    @GetMapping("/testAop")
-    public JSONObject testAop(String id){
-        System.out.println("收到aop测试请求，进入aop测试");
-        return JSON.parseObject("{\"message\":\"SUCCESS\",\"code\":200}");
+    @RequestMapping(value = "/check", method = RequestMethod.POST)
+    //@PermissionAnnotation
+    public JSONObject testAop(@RequestBody JSONObject request){
+        //System.out.println("收到aop测试请求，进入aop测试");
+        return JSON.parseObject("{\"message\":\"SUCCESS\",\"code\":200,\"data\":" + request +"}");
+
+    }
+
+    @GetMapping(value = "/hedgingRegistrationTemplate")
+    public void exportHedgingRegistrationTemplate(HttpServletResponse response) {
+        requestService.exportHedgingRegistrationTemplate(response);
     }
 }

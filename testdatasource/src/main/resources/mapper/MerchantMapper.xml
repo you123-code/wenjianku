@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.testdatasource.mapper.MerchantMapper">
+
+    <select id="getMerchantCount" parameterType="HashMap" resultType="integer" >
+        select
+        *
+        from
+        dim_merchant mer
+    </select>
+<!--    <insert id="ou" parameterType="com.zqlian.rongdan.component.model.gen.FinanceAgency" useGeneratedKeys="true" keyProperty="id">-->
+
+<!--    </insert>-->
+
+</mapper>

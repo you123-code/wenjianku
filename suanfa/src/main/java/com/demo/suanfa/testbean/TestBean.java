@@ -15,5 +15,6 @@ public class TestBean {
         //基于注解
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext("包路径");
         System.out.println("结束");
+
     }
 }

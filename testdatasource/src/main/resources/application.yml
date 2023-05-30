@@ -1,39 +1,41 @@
 server:
   port: 8081
-  servlet:
-    #请求路径：http://192.168.211.1:8081/test/request/getUser?id=911592303011950590
-    context-path: /test
+#  servlet:
+#    #请求路径：http://192.168.211.1:8081/test/request/getUser?id=911592303011950590
+#    context-path: /test
+#spring:
+#  application:
+#    name: test-server
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 192.168.211.132:8848
+#        password: nacos
+#        username: nacos
 spring:
-  application:
-    name: test-server
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 192.168.211.132:8848
-        password: nacos
-        username: nacos
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.211.132:3306/rongdan?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+    #url: jdbc:mysql://127.0.0.1:3306/mysql?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://192.168.1.15/jhzfolapdb?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
     username: root
-    password: 123456
-  jackson:
-    date-format: yyyy-MM-dd HH:mm:ss
-    time-zone: GMT+8
-    serialization:
-      write-dates-as-timestamps: false
-
-mybatis-plus:
-  configuration:
-    map-underscore-to-camel-case: true
-    auto-mapping-behavior: full
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-  mapper-locations: classpath*:mapper/**/*Mapper.xml
-  global-config:
-    # \u903B\u8F91\u5220\u9664\u914D\u7F6E
-    db-config:
-      # \u5220\u9664\u524D
-      logic-not-delete-value: 1
-      # \u5220\u9664\u540E
-      logic-delete-value: 0
-
+    password:
+#  jackson:
+#    date-format: yyyy-MM-dd HH:mm:ss
+#    time-zone: GMT+8
+#    serialization:
+#      write-dates-as-timestamps: false
+#
+#mybatis-plus:
+#  configuration:
+#    map-underscore-to-camel-case: true
+#    auto-mapping-behavior: full
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#  mapper-locations: classpath*:mapper/**/*Mapper.xml
+#  global-config:
+#    # \u903B\u8F91\u5220\u9664\u914D\u7F6E
+#    db-config:
+#      # \u5220\u9664\u524D
+#      logic-not-delete-value: 1
+#      # \u5220\u9664\u540E
+#      logic-delete-value: 0
+#
